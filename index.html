@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="theme-color" content="#3498db">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>Школа села Нариман</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Добавляем иконку для мобильных устройств -->
+    <link rel="apple-touch-icon" href="img/nariman.jpeg">
+    <link rel="icon" type="image/jpeg" href="img/nariman.jpeg">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <h1><i class="fas fa-school"></i> Школа села Нариман</h1>
+            </div>
+            <div class="burger-menu">
+                <div class="burger-icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+            <div class="nav-links">
+                <a href="#main" class="nav-link"><i class="fas fa-home"></i> Главная</a>
+                <a href="#about" class="nav-link"><i class="fas fa-info-circle"></i> О школе</a>
+                <a href="#news" class="nav-link"><i class="fas fa-newspaper"></i> Новости</a>
+                <a href="#teachers" class="nav-link"><i class="fas fa-chalkboard-teacher"></i> Учителя</a>
+                <a href="#contacts" class="nav-link"><i class="fas fa-envelope"></i> Контакты</a>
+            </div>
+        </nav>
+    </header>
+
+    <section id="main" class="hero">
+        <div class="hero-content">
+            <h1>Добро пожаловать в нашу школу</h1>
+            <p>Место, где каждый ребенок может раскрыть свой потенциал</p>
+            <div class="hero-buttons">
+                <button class="btn primary-btn" onclick="scrollToSection('about')">
+                    <i class="fas fa-info-circle"></i> Узнать больше
+                </button>
+                <button class="btn secondary-btn" onclick="scrollToSection('contacts')">
+                    <i class="fas fa-phone"></i> Связаться с нами
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <h2>О нашей школе</h2>
+        <div class="about-content">
+            <div class="about-text">
+                <p>Наша школа была основана в [год основания] году и с тех пор является центром образования и культуры села Нариман. Мы гордимся нашими традициями и стремимся к инновациям в образовании.</p>
+                <ul>
+                    <li>Качественное образование</li>
+                    <li>Опытные педагоги</li>
+                    <li>Современное оборудование</li>
+                    <li>Внеклассные активности</li>
+                </ul>
+                <button class="btn primary-btn mt-20" onclick="showModal('about-modal')">
+                    <i class="fas fa-book"></i> Подробнее о школе
+                </button>
+            </div>
+            <div class="about-stats">
+                <div class="stat-item">
+                    <h3>300+</h3>
+                    <p>Учеников</p>
+                </div>
+                <div class="stat-item">
+                    <h3>40+</h3>
+                    <p>Учителей</p>
+                </div>
+                <div class="stat-item">
+                    <h3>50+</h3>
+                    <p>Лет истории</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="news" class="news">
+        <h2>Школьные новости</h2>
+        <div class="news-grid">
+            <div class="news-item">
+                <img src="https://via.placeholder.com/300x200" alt="Новость 1">
+                <h3>Победа на олимпиаде</h3>
+                <p>Наши ученики заняли первое место на районной олимпиаде по математике</p>
+                <button class="btn secondary-btn" onclick="showModal('news-1-modal')">
+                    <i class="fas fa-arrow-right"></i> Читать далее
+                </button>
+            </div>
+            <div class="news-item">
+                <img src="https://via.placeholder.com/300x200" alt="Новость 2">
+                <h3>Спортивные достижения</h3>
+                <p>Школьная команда по волейболу выиграла областной турнир</p>
+            </div>
+            <div class="news-item">
+                <img src="https://via.placeholder.com/300x200" alt="Новость 3">
+                <h3>День открытых дверей</h3>
+                <p>Приглашаем всех желающих на день открытых дверей в нашей школе</p>
+            </div>
+        </div>
+        <div class="center-btn">
+            <button class="btn primary-btn" onclick="loadMoreNews()">
+                <i class="fas fa-plus"></i> Загрузить еще новости
+            </button>
+        </div>
+    </section>
+
+    <section id="teachers" class="teachers">
+        <h2>Наши учителя</h2>
+        <div class="teachers-grid">
+            <div class="teacher-card">
+                <img src="https://via.placeholder.com/200x200" alt="Учитель">
+                <h3>Арсланова М.Р.</h3>
+                <p>Учитель математики</p>
+                <button class="btn secondary-btn" onclick="showModal('teacher-1-modal')">
+                    <i class="fas fa-user"></i> Подробнее
+                </button>
+            </div>
+            <div class="teacher-card">
+                <img src="https://via.placeholder.com/200x200" alt="Учитель">
+                <h3>Зарманбетова А.А.</h3>
+                <p>Учитель химии и биологии</p>
+                <button class="btn secondary-btn" onclick="showModal('teacher-2-modal')">
+                    <i class="fas fa-user"></i> Подробнее
+                </button>
+            </div>
+            <div class="teacher-card">
+                <img src="https://via.placeholder.com/200x200" alt="Учитель">
+                <h3>Нурлубаева З.А.</h3>
+                <p>Учитель русского языка</p>
+                <button class="btn secondary-btn" onclick="showModal('teacher-3-modal')">
+                    <i class="fas fa-user"></i> Подробнее
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacts" class="contacts">
+        <h2>Контакты</h2>
+        <div class="contact-form">
+            <form id="contactForm" onsubmit="submitForm(event)">
+                <div class="form-group">
+                    <input type="text" id="name" required placeholder="Ваше имя">
+                </div>
+                <div class="form-group">
+                    <input type="email" id="email" required placeholder="Ваш email">
+                </div>
+                <div class="form-group">
+                    <textarea id="message" required placeholder="Ваше сообщение"></textarea>
+                </div>
+                <button type="submit" class="btn primary-btn">
+                    <i class="fas fa-paper-plane"></i> Отправить сообщение
+                </button>
+            </form>
+        </div>
+        <div class="contact-info">
+            <div class="contact-item">
+                <h3>Адрес</h3>
+                <p>Село Нариман, ул. Школьная, 1</p>
+            </div>
+            <div class="contact-item">
+                <h3>Телефон</h3>
+                <p>+7 (XXX) XXX-XX-XX</p>
+            </div>
+            <div class="contact-item">
+                <h3>Email</h3>
+                <p>school@nariman.edu</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Модальные окна -->
+    <div id="about-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('about-modal')">&times;</span>
+            <h2>О нашей школе</h2>
+            <p>Подробная информация о школе, её истории и достижениях...</p>
+        </div>
+    </div>
+
+    <div id="news-1-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('news-1-modal')">&times;</span>
+            <h2>Победа на олимпиаде</h2>
+            <p>Полный текст новости о победе на олимпиаде...</p>
+        </div>
+    </div>
+
+    <div id="teacher-1-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('teacher-1-modal')">&times;</span>
+            <h2>Арсланова М.Р.</h2>
+            <div class="teacher-modal-content">
+                <img src="https://via.placeholder.com/200x200" alt="Учитель" class="teacher-modal-img">
+                <div class="teacher-info">
+                    <h3>Учитель математики</h3>
+                    <p><strong>Образование:</strong> Высшее педагогическое</p>
+                    <p><strong>Стаж работы:</strong> 15 лет</p>
+                    <p><strong>Категория:</strong> Высшая</p>
+                    <p><strong>Достижения:</strong></p>
+                    <ul>
+                        <li>Победитель конкурса "Учитель года 2023"</li>
+                        <li>Автор методических пособий по математике</li>
+                        <li>Подготовила более 50 призеров олимпиад</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="teacher-2-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('teacher-2-modal')">&times;</span>
+            <h2>Зарманбетова А.А.</h2>
+            <div class="teacher-modal-content">
+                <img src="https://via.placeholder.com/200x200" alt="Учитель" class="teacher-modal-img">
+                <div class="teacher-info">
+                    <h3>Учитель химии и биологии</h3>
+                    <p><strong>Образование:</strong> Высшее педагогическое</p>
+                    <p><strong>Стаж работы:</strong> 12 лет</p>
+                    <p><strong>Категория:</strong> Первая</p>
+                    <p><strong>Достижения:</strong></p>
+                    <ul>
+                        <li>Руководитель школьного научного общества</li>
+                        <li>Организатор экологических проектов</li>
+                        <li>Победитель конкурса "Лучший учитель химии"</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="teacher-3-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('teacher-3-modal')">&times;</span>
+            <h2>Нурлубаева З.А.</h2>
+            <div class="teacher-modal-content">
+                <img src="https://via.placeholder.com/200x200" alt="Учитель" class="teacher-modal-img">
+                <div class="teacher-info">
+                    <h3>Учитель русского языка</h3>
+                    <p><strong>Образование:</strong> Высшее педагогическое</p>
+                    <p><strong>Стаж работы:</strong> 20 лет</p>
+                    <p><strong>Категория:</strong> Высшая</p>
+                    <p><strong>Достижения:</strong></p>
+                    <ul>
+                        <li>Почетный работник образования</li>
+                        <li>Руководитель школьного литературного клуба</li>
+                        <li>Организатор творческих конкурсов и фестивалей</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Уведомления -->
+    <div id="notification" class="notification"></div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-info">
+                <h3>Школа села Нариман</h3>
+                <p>© 2024 Все права защищены</p>
+            </div>
+            <div class="footer-links">
+                <a href="#main">Главная</a>
+                <a href="#about">О школе</a>
+                <a href="#news">Новости</a>
+                <a href="#contacts">Контакты</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 
