@@ -70,7 +70,7 @@ nav {
 /* Главный экран */
 .hero {
     height: 100vh;
-    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('nariman.jpeg');
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('img/nariman.jpeg');
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
