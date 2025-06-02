@@ -55,7 +55,7 @@ button {
 .home {
   position: relative;
   height: 100vh;
-  /* filter: blur(10px); */
+  overflow: hidden;
 }
 
 .home-img {
@@ -64,7 +64,8 @@ button {
   top: 0;
   width: 100%;
   height: 100%;
-  filter: blur(10px);
+  object-fit: cover;
+  object-position: center;
 }
 
 .home__container {
@@ -79,10 +80,10 @@ button {
   flex-direction: column;
   align-items: center;
   justify-content: flex-end;
-  background-image: url('../img/ainagul.jpeg');
-  background-repeat: no-repeat;
-  background-position: center;
+  position: relative;
+  z-index: 2;
   height: 100%;
+  background: none;
 }
 
 .home__title {
@@ -371,7 +372,10 @@ button {
 @media(max-width: 480px) {
   .home {
     height: 540px;
-    background-color: #eae1d9;
+  }
+
+  .home-img {
+    height: 100%;
   }
 
   .home__title {
