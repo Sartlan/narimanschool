@@ -1,0 +1,466 @@
+@font-face {
+	font-family: 'GoodVibesPro';
+	src: local("GoodVibesPro"),
+	url("../fonts/GoodVibesPro.woff2") format('woff2'),
+	url("../fonts/GoodVibesPro.woff") format('woff');
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'TTChocolates';
+	src: local("TTChocolates-Light"),
+	url("../fonts/TTChocolates-Light.woff2") format('woff2'),
+	url("../fonts/TTChocolates-Light.woff") format('woff');
+	font-weight: 300;
+	font-style: normal;
+	font-display: swap;
+}
+
+h1,h2,h3,h4,h5,h6,p {
+    margin: 0;
+}
+
+button {
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+    background-color: inherit;
+  }
+  
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  body {
+    margin: 0;
+    font-family: 'TTChocolates', Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+.container {
+  max-width: 900px; 
+  margin: 0 auto;
+}
+
+/* -------------------------------------------------- */
+
+.home {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.home-img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.home__container {
+  max-width: 675px;
+  position: relative;
+  z-index: 3;
+  height: 100%;
+}
+
+.home__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  background: none;
+}
+
+.home__title {
+  font-family: "GoodVibesPro";
+  font-size: 95px;
+  text-align: center;
+  color: #fff;
+  padding-bottom: 70px;
+  line-height: 1.2;
+}
+
+.home__heart-icon {
+  width: 37px;
+  height: 37px;
+  margin-bottom: -20px;
+}
+
+.main {
+  background-color: #eae1d9;
+  padding-top: 60px;
+}
+
+.main__container {
+  max-width: 780px;
+}
+
+.main__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main__text {
+  font-size: 26px;
+  color: #000;
+}
+
+.main__data {
+  font-size: 45px;
+  margin-bottom: 35px;
+  color: #000;
+}
+
+.wedding__text {
+  font-size: 45px;
+  margin-bottom: 50px;
+  color: #000;
+}
+
+.main__appeal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main__appeal-title {
+  font-weight: 400;
+  font-family: "GoodVibesPro";
+  font-size: 50px;
+}
+
+.music-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.appeal__text {
+  max-width: 660px;
+  text-align: center;
+}
+
+.main__calendar-block {
+  position: relative;
+}
+
+.main__calendar {
+  max-width: 450px;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  25% { transform: scale(1.3); }
+  50% { transform: scale(1); }
+  75% { transform: scale(1.3); }
+}
+
+.anim-heart {
+  position: absolute;
+  top: 242px;
+  right: 85px;
+  width: 140px;
+  animation: pulse 4s infinite ease-in-out;
+}
+
+.newlyweds-img {
+  width: 300px;
+  height: 400px;
+  margin-bottom: 60px;
+}
+
+.main__location {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.main__location-title {
+  font-weight: 400;
+  font-family: "GoodVibesPro";
+  font-size: 70px;
+  margin-bottom: 30px;
+}
+
+.main__location-hall {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.begin-wedding {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  25% { transform: scale(1.1); }
+  50% { transform: scale(1); }
+  75% { transform: scale(1.1); }
+}
+
+.main__location-btn {
+  font-family: 'TTChocolates';
+  border: 1px solid #000;
+  border-radius: 35px;
+  text-transform: uppercase;
+  font-size: 30px;
+  padding: 15px 50px;
+  animation: pulse 4s infinite ease-in-out;
+}
+
+.main__details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.main__details-title {
+  font-weight: 400;
+  font-family: "GoodVibesPro";
+  font-size: 70px;
+  margin-bottom: 30px;
+}
+
+.main__details-text-1 {
+  max-width: 430px;
+  text-align: center;
+  line-height: 1;
+}
+
+.main__details img {
+  width: 162px;
+}
+
+.main__details-text-2 {
+  max-width: 530px;
+  text-align: center;
+  line-height: 1;
+}
+
+.circles-block {
+  display: flex;
+  margin-bottom: 30px;
+}
+
+.circle {
+  border-radius: 100%;
+  width: 90px;
+  height: 90px;
+}
+
+.circle:nth-child(1) {
+  background-color: #7088ae;
+}
+
+.circle:nth-child(2) {
+  background-color: #9abcdf;
+}
+
+.circle:nth-child(3) {
+  background-color: #bdd0ee;
+}
+
+.circle:nth-child(4) {
+  background-color: #b2c3d7;
+}
+
+.circle:nth-child(5) {
+  background-color: #bec1c8;
+}
+
+.circle:nth-child(6) {
+  background-color: #b5bfcb;
+}
+
+.circle:nth-child(7) {
+  background-color: #c1ccd0;
+}
+
+.circle:not(:nth-child(1)) {
+  margin-left: -10px;
+}
+
+.wait {
+  background-image: url('../img/Total_white_wedding_.jpeg.webp');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.wait-bg {
+  background-image: -webkit-linear-gradient(top, rgba(234, 225, 217, 0.8), rgba(234, 225, 217, 0.7));
+  padding: 130px 0;
+}
+
+.wait__container {
+  max-width: 550px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.wait__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 55px;
+}
+
+.wait__icon {
+  font-size: 45px;
+}
+
+.wait__title {
+  font-family: serif;
+  font-size: 48px;
+  color: #000;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  font-weight: 400;
+}
+
+.wait__text {
+  text-transform: uppercase;
+  font-family: serif;
+  font-size: 24px;
+}
+
+.wait__time {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.wait__time-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.wait__time-block__time {
+  font-family: serif;
+  font-size: 60px;
+}
+
+@media(max-width: 700px) {
+  .circle {
+    width: 70px;
+    height: 70px;
+  }
+}
+
+@media(max-width: 480px) {
+  .home {
+    height: 540px;
+  }
+
+  .home-img {
+    height: 100%;
+  }
+
+  .home__title {
+    font-size: 65px;
+    padding-bottom: 30px;
+  }
+
+  .main {
+    padding-top: 30px;
+  }
+
+  .main__text {
+    font-size: 18px;
+  }
+
+  .main__data {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+
+  .appeal__text {
+    max-width: 350px;
+    margin-bottom: 20px;
+  }
+
+  .wedding__text {
+    font-size: 20px;
+  }
+
+  .main__calendar {
+    max-width: 280px;
+  }
+
+  .anim-heart {
+    width: 90px;
+    top: 150px;
+    right: 51px;
+  }
+
+  .main__location-title {
+    font-size: 55px;
+    margin-bottom: 20px;
+  }
+
+  .main__location-btn {
+    font-size: 23px;
+    padding: 10px 35px;
+  }
+
+  .main__details-title {
+    font-size: 55px;
+    margin-bottom: 20px;
+  }
+
+  .main__details-text-1 {
+    max-width: 300px;
+  }
+
+  .main__details-text-2 {
+    max-width: 300px;
+  }
+
+  .circle {
+    width: 45px;
+    height: 45px;
+    margin-left: 0;
+  }
+
+  .wait__icon {
+    font-size: 35px;
+  }
+
+  .wait__title {
+    font-size: 35px;
+  }
+
+  .wait__text {
+    font-size: 20px;
+  }
+
+  .wait__time {
+    max-width: 270px;
+  }
+
+  .wait__time-block__time {
+    font-size: 30px;
+  }
+}
